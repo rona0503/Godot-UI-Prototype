@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://j2nbaicehwt4"]
+
+[ext_resource type="PackedScene" uid="uid://b4o0sba3dppow" path="res://scenes/Menus/pause_menu.tscn" id="1_h64sa"]
+[ext_resource type="PackedScene" uid="uid://cc7n3mqil73eu" path="res://scenes/Buttons/pause_button.tscn" id="2_oq85f"]
+[ext_resource type="PackedScene" uid="uid://w2qtuun3ktub" path="res://scenes/Menus/options_menu.tscn" id="3_oq85f"]
+[ext_resource type="PackedScene" uid="uid://cyo4phka7jpv1" path="res://scenes/Menus/ConfirmDialog.tscn" id="4_gw64l"]
+[ext_resource type="PackedScene" uid="uid://r2k8tqsb8ie7" path="res://scenes/Menus/main_menu.tscn" id="5_w2n7r"]
+
+[node name="SampleMainScene" type="Node2D"]
+
+[node name="PauseButton" parent="." instance=ExtResource("2_oq85f")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("1_h64sa")]
+visible = false
+offset_left = 576.0
+offset_top = 324.0
+offset_right = 576.0
+offset_bottom = 324.0
+
+[node name="OptionsMenu" parent="." instance=ExtResource("3_oq85f")]
+visible = false
+offset_left = 576.0
+offset_top = 324.0
+offset_right = 576.0
+offset_bottom = 324.0
+
+[node name="ConfirmDialog" parent="." instance=ExtResource("4_gw64l")]
+visible = false
+offset_left = 576.0
+offset_top = 324.0
+offset_right = 576.0
+offset_bottom = 324.0
+
+[node name="Main Menu" parent="." instance=ExtResource("5_w2n7r")]
+offset_left = 576.0
+offset_top = 324.0
+offset_right = 576.0
+offset_bottom = 324.0

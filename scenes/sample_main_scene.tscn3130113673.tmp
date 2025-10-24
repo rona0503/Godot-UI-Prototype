@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://j2nbaicehwt4"]
+
+[ext_resource type="PackedScene" uid="uid://b4o0sba3dppow" path="res://scenes/pause_menu.tscn" id="1_h64sa"]
+[ext_resource type="PackedScene" uid="uid://dtd3pio4b052a" path="res://scenes/pause_button.tscn" id="2_oq85f"]
+[ext_resource type="PackedScene" uid="uid://w2qtuun3ktub" path="res://scenes/options_menu.tscn" id="3_oq85f"]
+
+[node name="SampleMainScene" type="Node2D"]
+
+[node name="PauseButton" parent="." instance=ExtResource("2_oq85f")]
+offset_left = 1099.0
+offset_top = 1.0
+offset_right = 1099.0
+offset_bottom = 1.0
+
+[node name="PauseMenu" parent="." instance=ExtResource("1_h64sa")]
+visible = false
+offset_left = 576.0
+offset_top = 324.0
+offset_right = 576.0
+offset_bottom = 324.0
+metadata/_edit_use_anchors_ = true
+
+[node name="OptionsMenu" parent="." instance=ExtResource("3_oq85f")]
+visible = false
+offset_left = 576.0
+offset_top = 324.0
+offset_right = 576.0
+offset_bottom = 324.0
