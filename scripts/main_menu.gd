@@ -26,7 +26,7 @@ func _on_Confirm(context : String) -> void:
 	match context:
 		"quit_game":
 			get_tree().quit()
-func _on_Cancel(context : String) -> void:
+func _on_Cancel(_context : String) -> void:
 	UIManager.openMenu(UIManager.Menu.PAUSE_MENU)
 	UIManager.closeMenu(UIManager.Menu.MAIN_MENU)
 func _on_quit_button_up() -> void:
