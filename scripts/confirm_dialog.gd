@@ -7,7 +7,7 @@ var currentContext : String = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	EventBus.connect("confirm_requested",  _on_Confirm_Requested)
+	UIManager.connect("confirm_requested",  _on_Confirm_Requested)
 	hide()
 	
 
@@ -19,11 +19,11 @@ func _on_Confirm_Requested(message : String, ConfirmText : String, CancelText : 
 	show()
 
 func _on_confim_button_up() -> void:
-	EventBus.emit_signal("confirmed", currentContext)
-	EventBus.emit_signal("menuClosed", EventBus.Menu.CONFIRM_DIALOG_MENU)
+	UIManager.emit_signal("confirmed", currentContext)
+	UIManager.emit_signal("menuClosed", UIManager.Menu.CONFIRM_DIALOG_MENU)
 	hide()
 
 func _on_cancel_button_up() -> void:
-	EventBus.emit_signal("notConfirmed", currentContext)
-	EventBus.emit_signal("menuClosed", EventBus.Menu.CONFIRM_DIALOG_MENU)
+	UIManager.emit_signal("notConfirmed", currentContext)
+	UIManager.emit_signal("menuClosed", UIManager.Menu.CONFIRM_DIALOG_MENU)
 	hide()
