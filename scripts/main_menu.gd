@@ -17,6 +17,7 @@ func _on_Close_Main_Menu(menu : int) -> void:
 		hide()
 
 
+
 func _on_options_button_up() -> void:
 	UIManager.openMenu(UIManager.Menu.OPTIONS_MENU)
 	UIManager.closeMenu(UIManager.Menu.MAIN_MENU)

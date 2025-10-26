@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ftyje4625suu"]
+
+[ext_resource type="Script" uid="uid://rawedx0cy6ni" path="res://scripts/Buttons/base_menu_navigate_button.gd" id="1_tp24y"]
+
+[node name="Base Menu Navigate Button" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Button"
+script = ExtResource("1_tp24y")
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]

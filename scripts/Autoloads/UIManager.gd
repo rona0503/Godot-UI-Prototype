@@ -1,6 +1,8 @@
 extends Node
 
 enum Menu  {
+	BASE_MENU,
+	PAUSE_BUTTON,
 	PAUSE_MENU,
 	OPTIONS_MENU,
 	CONFIRM_DIALOG_MENU,
@@ -39,10 +41,16 @@ func closeMenu(menu : int) -> void:
 
 #Confirm Dialog
 signal confirm_requested(message: String, ConfirmText: String, CancelText : String, Context : String)
+@warning_ignore("unused_signal")
 signal confirmed(Context : String)
+@warning_ignore("unused_signal")
 signal notConfirmed(Context : String)
 func request_Confirm(message: String, ConfirmText: String, CancelText : String, Context : String) -> void:
 	emit_signal("confirm_requested", message, ConfirmText, CancelText, Context)
 	emit_signal("menuOpened", Menu.CONFIRM_DIALOG_MENU)
+	
+#Extra functions
+func check_enum_consistency(LocalEnum : Dictionary) -> void:
+	assert(LocalEnum == Menu, "Enum Mismatch: Local Menu is not equal to UIManager Menu")
 	
 	

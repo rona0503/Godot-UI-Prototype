@@ -1,14 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://cc7n3mqil73eu"]
+[gd_scene load_steps=3 format=3 uid="uid://cc7n3mqil73eu"]
 
-[ext_resource type="Script" uid="uid://1mkqfwfrxuwl" path="res://scripts/pauseButton.gd" id="1_5rmv1"]
+[ext_resource type="Script" uid="uid://ckn0lump1n15o" path="res://scripts/Menus/Base_Menu.gd" id="1_3aq3v"]
+[ext_resource type="PackedScene" uid="uid://ftyje4625suu" path="res://scenes/Buttons/base_menu_navigate_button.tscn" id="2_pve61"]
 
-[node name="PauseButton" type="Button"]
-process_mode = 3
-offset_left = 1098.0
-offset_right = 1151.0
-offset_bottom = 53.0
-theme_override_font_sizes/font_size = 32
+[node name="PauseButton" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3aq3v")
+MenuName = 1
+
+[node name="PauseButton" parent="." instance=ExtResource("2_pve61")]
+layout_mode = 1
+offset_right = 62.0
+offset_bottom = 31.0
 text = "P"
-script = ExtResource("1_5rmv1")
-
-[connection signal="button_up" from="." to="." method="_on_button_up"]
+MenuOpen = 2
+MenuClose = 1

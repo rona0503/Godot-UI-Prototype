@@ -1,61 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4o0sba3dppow"]
+[gd_scene load_steps=4 format=3 uid="uid://dmbjlcljigt6c"]
 
-[ext_resource type="Script" uid="uid://d58gu8f7ociv" path="res://scripts/pauseMenu.gd" id="2_5d2l8"]
+[ext_resource type="PackedScene" uid="uid://bl2f4vapiws7f" path="res://scenes/Menus/Base_Menu.tscn" id="1_vrwda"]
+[ext_resource type="PackedScene" uid="uid://ftyje4625suu" path="res://scenes/Buttons/base_menu_navigate_button.tscn" id="2_prkpd"]
+[ext_resource type="PackedScene" uid="uid://5n0jxp40361n" path="res://scenes/Buttons/quit_button.tscn" id="3_3k1r1"]
 
-[node name="PauseMenu" type="Control"]
-process_mode = 3
-layout_mode = 3
-anchors_preset = 0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-script = ExtResource("2_5d2l8")
+[node name="PauseMenu" instance=ExtResource("1_vrwda")]
+MenuName = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -122.0
-offset_top = -106.0
-offset_right = 122.0
-offset_bottom = 106.0
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(20, 20)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 32
+[node name="Menu Name" parent="CenterContainer/Menu Panel/MarginContainer/VBoxContainer" index="0"]
 text = "Pause Menu"
-horizontal_alignment = 1
 
-[node name="Resume" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="Resume" parent="CenterContainer/Menu Panel/MarginContainer/VBoxContainer" index="2" instance=ExtResource("2_prkpd")]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_stretch_ratio = 3.03
-theme_override_font_sizes/font_size = 18
-text = "Resume
-"
+text = "Resume"
+MenuOpen = 1
+MenuClose = 2
 
-[node name="OptionsButton" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="Options" parent="CenterContainer/Menu Panel/MarginContainer/VBoxContainer" index="3" instance=ExtResource("2_prkpd")]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_font_sizes/font_size = 18
 text = "Options"
+MenuOpen = 3
+MenuClose = 2
 
-[node name="QuitButton" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="QuitButton" parent="CenterContainer/Menu Panel/MarginContainer/VBoxContainer" index="4" instance=ExtResource("3_3k1r1")]
 layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-text = "Quit
-"
-
-[connection signal="button_up" from="PanelContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_button_up"]
+MenuClose = 2

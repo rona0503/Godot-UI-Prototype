@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-UIManager="*res://scripts/UIManager.gd"
+UIManager="*res://scripts/Autoloads/UIManager.gd"
 
 [debug]
 

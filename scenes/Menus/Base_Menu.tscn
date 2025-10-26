@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://bl2f4vapiws7f"]
+
+[ext_resource type="Script" uid="uid://ckn0lump1n15o" path="res://scripts/Menus/Base_Menu.gd" id="1_ruvu7"]
+
+[node name="Base Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ruvu7")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menu Panel" type="PanelContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/Menu Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/Menu Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="Menu Name" type="Label" parent="CenterContainer/Menu Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 26
+text = "Menu Template"
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/Menu Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
