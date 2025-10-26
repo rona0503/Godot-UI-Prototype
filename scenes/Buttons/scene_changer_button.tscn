@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ibm37yrg2xce"]
+
+[ext_resource type="Script" uid="uid://cylxylu1fnkx8" path="res://scripts/Buttons/scene_changer_button.gd" id="1_yhi1s"]
+
+[node name="SceneChangerButton" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Button"
+script = ExtResource("1_yhi1s")
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]

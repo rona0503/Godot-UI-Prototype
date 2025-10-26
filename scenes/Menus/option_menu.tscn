@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://qvpg8v5ehysw"]
 
 [ext_resource type="PackedScene" uid="uid://bl2f4vapiws7f" path="res://scenes/Menus/Base_Menu.tscn" id="1_iydpv"]
-[ext_resource type="PackedScene" uid="uid://ftyje4625suu" path="res://scenes/Buttons/base_menu_navigate_button.tscn" id="2_rv5un"]
+[ext_resource type="PackedScene" uid="uid://bineifw8tdagw" path="res://scenes/Buttons/back_button.tscn" id="2_rv5un"]
 
 [node name="Option Menu" instance=ExtResource("1_iydpv")]
 MenuName = 3
@@ -9,8 +9,7 @@ MenuName = 3
 [node name="Menu Name" parent="CenterContainer/Menu Panel/MarginContainer/VBoxContainer" index="0"]
 text = "Options Menu"
 
-[node name="Base Menu Navigate Button" parent="CenterContainer/Menu Panel/MarginContainer/VBoxContainer" index="2" instance=ExtResource("2_rv5un")]
+[node name="Back Button" parent="CenterContainer/Menu Panel/MarginContainer/VBoxContainer" index="2" instance=ExtResource("2_rv5un")]
 layout_mode = 2
-text = "Back to Pause Menu"
-MenuOpen = 2
-MenuClose = 3
+text = "Back
+"

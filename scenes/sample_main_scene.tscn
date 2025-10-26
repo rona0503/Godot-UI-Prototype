@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://j2nbaicehwt4"]
+[gd_scene load_steps=5 format=3 uid="uid://j2nbaicehwt4"]
 
 [ext_resource type="PackedScene" uid="uid://dmbjlcljigt6c" path="res://scenes/Menus/pause_menu.tscn" id="1_h64sa"]
 [ext_resource type="PackedScene" uid="uid://cc7n3mqil73eu" path="res://scenes/Buttons/pause_button.tscn" id="2_oq85f"]
 [ext_resource type="PackedScene" uid="uid://qvpg8v5ehysw" path="res://scenes/Menus/option_menu.tscn" id="3_oq85f"]
+[ext_resource type="PackedScene" uid="uid://cyo4phka7jpv1" path="res://scenes/Menus/ConfirmDialog.tscn" id="4_gw64l"]
 
 [node name="SampleMainScene" type="Node2D"]
 
@@ -22,5 +23,7 @@ grow_vertical = 1
 size_flags_horizontal = 4
 size_flags_vertical = 0
 
-[node name="Base Menu" parent="CanvasLayer" instance=ExtResource("3_oq85f")]
+[node name="Option Menu" parent="CanvasLayer" instance=ExtResource("3_oq85f")]
 visible = false
+
+[node name="ConfirmDialog" parent="CanvasLayer" instance=ExtResource("4_gw64l")]

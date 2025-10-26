@@ -17,15 +17,16 @@ var currentMenu : int
 var previousMenu : int
 var menuStack : Array = []
 
-func openMenu(menu : int, transient : bool = false) -> void:
-	if not transient:
-		if currentMenu != null:
-			menuStack.append(currentMenu)
-		previousMenu = currentMenu
-	currentMenu = menu
+
+func changeMenu(CurrentMenu: int, targetMenu: int, transient: bool = false) -> void:
+	previousMenu = CurrentMenu
+	currentMenu = targetMenu
 	
-	emit_signal("menuChanged", previousMenu, currentMenu)
+	if not transient:
+		if previousMenu != null:
+			menuStack.append(previousMenu)
 	emit_signal("menuOpened", currentMenu)
+	emit_signal("menuClosed", CurrentMenu)
 
 func backMenu() -> void:
 	if menuStack.size() > 0:
@@ -35,9 +36,6 @@ func backMenu() -> void:
 		emit_signal("menuClosed", previousMenu)
 		emit_signal("menuChanged", previousMenu, currentMenu)
 		emit_signal("menuOpened", currentMenu)
-
-func closeMenu(menu : int) -> void:
-	emit_signal("menuClosed", menu)
 
 #Confirm Dialog
 signal confirm_requested(message: String, ConfirmText: String, CancelText : String, Context : String)

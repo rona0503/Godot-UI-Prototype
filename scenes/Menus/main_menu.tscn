@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://b366l3eb2ikld"]
+
+[ext_resource type="PackedScene" uid="uid://bl2f4vapiws7f" path="res://scenes/Menus/Base_Menu.tscn" id="1_rvjno"]
+[ext_resource type="PackedScene" uid="uid://ibm37yrg2xce" path="res://scenes/Buttons/scene_changer_button.tscn" id="2_iep04"]
+[ext_resource type="PackedScene" uid="uid://ftyje4625suu" path="res://scenes/Buttons/base_menu_navigate_button.tscn" id="3_3b8pq"]
+[ext_resource type="PackedScene" uid="uid://j2nbaicehwt4" path="res://scenes/sample_main_scene.tscn" id="3_xfgxo"]
+[ext_resource type="PackedScene" uid="uid://5n0jxp40361n" path="res://scenes/Buttons/quit_button.tscn" id="4_xfgxo"]
+
+[node name="Main Menu" instance=ExtResource("1_rvjno")]
+MenuName = 5
+
+[node name="Menu Name" parent="CenterContainer/Menu Panel/MarginContainer/VBoxContainer" index="0"]
+text = "Main Menu"
+
+[node name="Play" parent="CenterContainer/Menu Panel/MarginContainer/VBoxContainer" index="2" instance=ExtResource("2_iep04")]
+layout_mode = 2
+text = "Play"
+TargetScene = ExtResource("3_xfgxo")
+
+[node name="Options" parent="CenterContainer/Menu Panel/MarginContainer/VBoxContainer" index="3" instance=ExtResource("3_3b8pq")]
+layout_mode = 2
+text = "Options
+"
+MenuOpen = 3
+MenuClose = 5
+
+[node name="QuitButton" parent="CenterContainer/Menu Panel/MarginContainer/VBoxContainer" index="4" instance=ExtResource("4_xfgxo")]
+layout_mode = 2
+MenuClose = 5

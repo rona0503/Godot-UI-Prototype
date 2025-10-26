@@ -15,9 +15,9 @@ enum Menu  {
 
 func _ready() -> void:
 	UIManager.check_enum_consistency(Menu)
-
+	
 
 
 func _on_button_up() -> void:
-	UIManager.openMenu(MenuOpen)
-	UIManager.closeMenu(MenuClose)
+	UIManager.changeMenu(MenuClose, MenuOpen)
+	

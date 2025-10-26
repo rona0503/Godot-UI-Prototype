@@ -1,8 +1,7 @@
 extends Control
-@onready var Confirm: Button = $PanelContainer/VBoxContainer/HBoxContainer/Confirm
-@onready var NotConfirm: Button = $PanelContainer/VBoxContainer/HBoxContainer/Cancel
-@onready var label: Label = $PanelContainer/VBoxContainer/Label
-
+@onready var Confirm: Button = $"CenterContainer/Dialog Panel/MarginContainer/VBoxContainer/HBoxContainer/Confirm"
+@onready var NotConfirm: Button = $"CenterContainer/Dialog Panel/MarginContainer/VBoxContainer/HBoxContainer/Cancel"
+@onready var label: Label = $"CenterContainer/Dialog Panel/MarginContainer/VBoxContainer/Label"
 var currentContext : String = ""
 
 # Called when the node enters the scene tree for the first time.
