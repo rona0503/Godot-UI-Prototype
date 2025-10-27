@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cc7n3mqil73eu"]
 
-[ext_resource type="Script" uid="uid://ckn0lump1n15o" path="res://scripts/Menus/Base_Menu.gd" id="1_3aq3v"]
-[ext_resource type="PackedScene" uid="uid://ftyje4625suu" path="res://scenes/Buttons/base_menu_navigate_button.tscn" id="2_pve61"]
+[ext_resource type="Script" uid="uid://ckn0lump1n15o" path="res://scripts/UI/Menus/Base_Menu.gd" id="1_3aq3v"]
+[ext_resource type="PackedScene" uid="uid://ftyje4625suu" path="res://scenes/UI/Buttons/Template/base_menu_navigate_button.tscn" id="2_pve61"]
 
 [node name="PauseButton" type="Control"]
 layout_mode = 3

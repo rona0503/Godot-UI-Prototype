@@ -19,5 +19,6 @@ func _ready() -> void:
 
 
 func _on_button_up() -> void:
+	assert(MenuOpen != Menu.BASE_MENU and MenuClose != Menu.BASE_MENU, "Error: Either MenuOpen or MenuClose is still set to default menu.")
 	UIManager.changeMenu(MenuClose, MenuOpen)
 	

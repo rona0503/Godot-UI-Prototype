@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cyo4phka7jpv1"]
 
-[ext_resource type="Script" uid="uid://bxfn5j36w6qge" path="res://scripts/Menus/confirm_dialog.gd" id="1_xqnrh"]
+[ext_resource type="Script" uid="uid://bxfn5j36w6qge" path="res://scripts/UI/Menus/confirm_dialog.gd" id="1_xqnrh"]
 
 [node name="ConfirmDialog" type="Control"]
 process_mode = 3

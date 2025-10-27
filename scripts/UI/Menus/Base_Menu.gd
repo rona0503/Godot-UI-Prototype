@@ -17,7 +17,7 @@ func _ready() -> void:
 	UIManager.connect("menuClosed", Callable(self, "_on_Close_Menu"))
 	#if visible == true:
 		#UIManager.menuStack.append(MenuName)
-	assert(MenuName != Menu.BASE_MENU, name + " menu's Menu Name is not properly set.")
+	assert(MenuName != Menu.BASE_MENU, name + "'s Menu Name is not properly set.")
 	
 	
 

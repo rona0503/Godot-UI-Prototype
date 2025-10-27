@@ -1,8 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://bineifw8tdagw"]
-
-[ext_resource type="PackedScene" uid="uid://ftyje4625suu" path="res://scenes/Buttons/base_menu_navigate_button.tscn" id="1_vbtkk"]
-[ext_resource type="Script" uid="uid://cnab7jlnxks12" path="res://scripts/Buttons/back_button.gd" id="2_t40ql"]
-
-[node name="Back Button" instance=ExtResource("1_vbtkk")]
-text = "Back"
-script = ExtResource("2_t40ql")

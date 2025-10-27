@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ftyje4625suu"]
 
-[ext_resource type="Script" uid="uid://rawedx0cy6ni" path="res://scripts/Buttons/base_menu_navigate_button.gd" id="1_tp24y"]
+[ext_resource type="Script" uid="uid://rawedx0cy6ni" path="res://scripts/UI/Buttons/Templates/base_menu_navigate_button.gd" id="1_tp24y"]
 
 [node name="Base Menu Navigate Button" type="Button"]
 offset_right = 8.0

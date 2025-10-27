@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://dmbjlcljigt6c"]
 
-[ext_resource type="PackedScene" uid="uid://bl2f4vapiws7f" path="res://scenes/Menus/Base_Menu.tscn" id="1_vrwda"]
-[ext_resource type="PackedScene" uid="uid://ftyje4625suu" path="res://scenes/Buttons/base_menu_navigate_button.tscn" id="2_prkpd"]
-[ext_resource type="PackedScene" uid="uid://5n0jxp40361n" path="res://scenes/Buttons/quit_button.tscn" id="3_3k1r1"]
+[ext_resource type="PackedScene" uid="uid://bl2f4vapiws7f" path="res://scenes/UI/Menus/Template/Base_Menu.tscn" id="1_vrwda"]
+[ext_resource type="PackedScene" uid="uid://ftyje4625suu" path="res://scenes/UI/Buttons/Template/base_menu_navigate_button.tscn" id="2_prkpd"]
+[ext_resource type="PackedScene" uid="uid://5n0jxp40361n" path="res://scenes/UI/Buttons/Utilities/quit_button.tscn" id="3_3k1r1"]
 
 [node name="PauseMenu" instance=ExtResource("1_vrwda")]
 MenuName = 2
