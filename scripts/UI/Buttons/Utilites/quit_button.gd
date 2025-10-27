@@ -11,6 +11,7 @@ func _ready() -> void:
 func _on_Confirm(context : String) -> void:
 	match context:
 		"quit_game":
+			await  FadeTransition.fade_out(0.7)
 			get_tree().quit()
 func _on_Cancel(_context : String) -> void:
 	UIManager.backMenu()

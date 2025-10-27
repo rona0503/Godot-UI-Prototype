@@ -22,6 +22,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 UIManager="*res://scripts/Autoloads/UIManager.gd"
+FadeTransition="*res://scenes/UI/Transition/fade_transition.tscn"
 
 [debug]
 
