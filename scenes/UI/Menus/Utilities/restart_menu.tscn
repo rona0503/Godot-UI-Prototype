@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b6u80vetfhdu7"]
+
+[ext_resource type="PackedScene" uid="uid://bl2f4vapiws7f" path="res://scenes/UI/Menus/Template/Base_Menu.tscn" id="1_q4coj"]
+[ext_resource type="PackedScene" uid="uid://ibm37yrg2xce" path="res://scenes/UI/Buttons/Template/scene_changer_button.tscn" id="2_5tcju"]
+[ext_resource type="PackedScene" uid="uid://b366l3eb2ikld" path="res://scenes/UI/Menus/Utilities/main_menu.tscn" id="3_xja06"]
+
+[node name="Restart Menu" instance=ExtResource("1_q4coj")]
+
+[node name="Menu Name" parent="CenterContainer/Menu Panel/MarginContainer/VBoxContainer" index="0"]
+text = "Restart Menu"
+
+[node name="Restart" parent="CenterContainer/Menu Panel/MarginContainer/VBoxContainer" index="2" instance=ExtResource("2_5tcju")]
+layout_mode = 2
+text = "Restart"
+
+[node name="Back to Main Menu" parent="CenterContainer/Menu Panel/MarginContainer/VBoxContainer" index="3" instance=ExtResource("2_5tcju")]
+layout_mode = 2
+text = "Back to Main Menu"
+TargetScene = ExtResource("3_xja06")
