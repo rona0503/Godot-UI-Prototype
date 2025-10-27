@@ -13,7 +13,7 @@ func _on_Confirm(context : String) -> void:
 		"quit_game":
 			get_tree().quit()
 func _on_Cancel(_context : String) -> void:
-	UIManager.openMenu(MenuClose)
+	UIManager.backMenu()
 func _on_button_up() -> void:
 	UIManager.request_Confirm("Are you sure you want to quit?", "Yes", "No", "quit_game")
 	super._on_button_up()
