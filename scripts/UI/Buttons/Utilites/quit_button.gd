@@ -8,6 +8,7 @@ func _ready() -> void:
 	UIManager.connect("confirmed", _on_Confirm)
 	UIManager.connect("notConfirmed", _on_Cancel)
 
+
 func _on_Confirm(context : String) -> void:
 	match context:
 		"quit_game":

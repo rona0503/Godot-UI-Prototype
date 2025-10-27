@@ -1,6 +1,7 @@
 class_name BaseMenuNavigateButton
 extends Button
 
+## Local enum that should be equal to autoload enum
 enum Menu  {
 	BASE_MENU,
 	PAUSE_BUTTON,
@@ -17,7 +18,7 @@ func _ready() -> void:
 	UIManager.check_enum_consistency(Menu)
 	
 
-
+## Triggered when button stops being pressed
 func _on_button_up() -> void:
 	assert(MenuOpen != Menu.BASE_MENU and MenuClose != Menu.BASE_MENU, "Error: Either MenuOpen or MenuClose is still set to default menu.")
 	UIManager.changeMenu(MenuClose, MenuOpen)
