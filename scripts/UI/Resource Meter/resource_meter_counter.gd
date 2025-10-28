@@ -16,8 +16,11 @@ func _ready() -> void:
 	Resources.connect("maxValueChanged", onMaxValueChange)
 	Resources.connect("currentValueChanged", onCurrentValueChange)
 	
-func onMaxValueChange() -> void:
-	max_resource_value.text = str(Resources.MaxValue)
+func onMaxValueChange(newMaxValue : int) -> void:
+	max_resource_value.text = str(newMaxValue)
 	
-func onCurrentValueChange() -> void:
-	current_resource_value.text = str(Resources.CurrentValue)
+func onCurrentValueChange(newCurrentValue : int) -> void:
+	var tween : Tween = create_tween()
+	tween.tween_method(updateValue, int(current_resource_value.text), newCurrentValue, 0.15)
+func updateValue(value : float) -> void:
+	current_resource_value.text = str(int(round(value)))

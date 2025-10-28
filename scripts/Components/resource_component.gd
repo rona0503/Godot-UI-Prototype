@@ -6,8 +6,8 @@ extends Node2D
 @export var ResourceName : String = ""
 var CurrentValue : int = 0
 
-signal maxValueChanged
-signal currentValueChanged
+signal maxValueChanged(newMaxValue : int)
+signal currentValueChanged(newCurrentValue : int)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,11 +16,12 @@ func _ready() -> void:
 
 func MaxValueChanged(deltaChange : int) -> void:
 	MaxValue += deltaChange
-	emit_signal("maxValueChanged")
+	emit_signal("maxValueChanged", MaxValue)
 
 func CurrentValueChanged(deltaChange : int) -> void:
-	print("gh")
+	print("n")
 	if CurrentValue >= 0:
+		print("o")
 		CurrentValue += deltaChange
 		CurrentValue = clamp(CurrentValue, 0, MaxValue)
-		emit_signal("currentValueChanged")
+		emit_signal("currentValueChanged", CurrentValue)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://j2nbaicehwt4"]
+[gd_scene load_steps=9 format=3 uid="uid://j2nbaicehwt4"]
 
 [ext_resource type="PackedScene" uid="uid://dmbjlcljigt6c" path="res://scenes/UI/Menus/Utilities/pause_menu.tscn" id="1_h64sa"]
 [ext_resource type="PackedScene" uid="uid://cc7n3mqil73eu" path="res://scenes/UI/Buttons/Utilities/pause_button.tscn" id="2_oq85f"]
@@ -7,45 +7,64 @@
 [ext_resource type="PackedScene" uid="uid://ei2kxe13dk5l" path="res://scenes/Components/resource_component.tscn" id="5_0km3e"]
 [ext_resource type="PackedScene" uid="uid://b07bj1gp6sy12" path="res://scenes/UI/ResourceMeter/resource_meter_counter.tscn" id="6_lu0e1"]
 [ext_resource type="Script" uid="uid://cm06lfddeyjtj" path="res://scripts/DummyScripts/dummy_attack_button.gd" id="7_lu0e1"]
+[ext_resource type="PackedScene" uid="uid://wo6pjwyr3cr1" path="res://scenes/UI/ResourceMeter/resource_meter_bar.tscn" id="8_q87p1"]
 
 [node name="SampleMainScene" type="Node2D"]
 
 [node name="Node2D" type="Node2D" parent="."]
 
-[node name="Control" type="Control" parent="Node2D"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="ResourceMeterBar" parent="Node2D" node_paths=PackedStringArray("resources") instance=ExtResource("8_q87p1")]
+resources = NodePath("../ResourceComponent")
 metadata/_edit_use_anchors_ = true
 
-[node name="Dummy AttackButton" type="Button" parent="Node2D/Control" node_paths=PackedStringArray("healthComponent")]
-layout_mode = 1
+[node name="Dummy AttackButton" type="Button" parent="Node2D" node_paths=PackedStringArray("healthComponent")]
 anchors_preset = -1
 anchor_left = 5.7
 anchor_top = 0.975
 anchor_right = 5.7
 anchor_bottom = 0.975
-offset_left = 57.0
-offset_top = 96.0
-offset_right = 115.0
-offset_bottom = 127.0
+offset_left = 114.0
+offset_top = 83.0
+offset_right = 172.0
+offset_bottom = 114.0
 text = "Attack"
 script = ExtResource("7_lu0e1")
-healthComponent = NodePath("../../HealthComponent")
-damage = 10
+healthComponent = NodePath("../ResourceComponent")
+damage = 5
 metadata/_edit_use_anchors_ = true
 
-[node name="HealthComponent" parent="Node2D" instance=ExtResource("5_0km3e")]
+[node name="ResourceComponent" parent="Node2D" instance=ExtResource("5_0km3e")]
+MaxValue = 200
+ResourceName = "health"
+
+[node name="HealthCounter" type="Node2D" parent="."]
+
+[node name="HealthComponent" parent="HealthCounter" instance=ExtResource("5_0km3e")]
 MaxValue = 200
 ResourceName = "Health"
 
-[node name="HealthMeterCounter" parent="Node2D" node_paths=PackedStringArray("Resources") instance=ExtResource("6_lu0e1")]
-offset_left = 228.0
-offset_top = 68.0
-offset_right = 228.0
-offset_bottom = 68.0
+[node name="HealthMeterCounter" parent="HealthCounter" node_paths=PackedStringArray("Resources") instance=ExtResource("6_lu0e1")]
+offset_left = 264.0
+offset_top = 145.0
+offset_right = 264.0
+offset_bottom = 145.0
 Resources = NodePath("../HealthComponent")
+metadata/_edit_use_anchors_ = true
+
+[node name="Dummy AttackButton" type="Button" parent="HealthCounter" node_paths=PackedStringArray("healthComponent")]
+anchors_preset = -1
+anchor_left = 5.7
+anchor_top = 0.975
+anchor_right = 5.7
+anchor_bottom = 0.975
+offset_left = 321.0
+offset_top = 212.0
+offset_right = 379.0
+offset_bottom = 243.0
+text = "Attack"
+script = ExtResource("7_lu0e1")
+healthComponent = NodePath("../HealthComponent")
+damage = 5
 metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -70,4 +89,5 @@ visible = false
 [node name="ConfirmDialog" parent="CanvasLayer" instance=ExtResource("4_gw64l")]
 visible = false
 
-[connection signal="button_up" from="Node2D/Control/Dummy AttackButton" to="Node2D/Control/Dummy AttackButton" method="_on_button_up"]
+[connection signal="button_up" from="Node2D/Dummy AttackButton" to="Node2D/Dummy AttackButton" method="_on_button_up"]
+[connection signal="button_up" from="HealthCounter/Dummy AttackButton" to="HealthCounter/Dummy AttackButton" method="_on_button_up"]
