@@ -13,6 +13,10 @@
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="ResourceMeterBar" parent="Node2D" node_paths=PackedStringArray("resources") instance=ExtResource("8_q87p1")]
+offset_left = 62.0
+offset_top = 42.0
+offset_right = 62.0
+offset_bottom = 42.0
 resources = NodePath("../ResourceComponent")
 metadata/_edit_use_anchors_ = true
 

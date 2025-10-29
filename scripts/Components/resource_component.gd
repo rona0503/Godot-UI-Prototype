@@ -19,9 +19,7 @@ func MaxValueChanged(deltaChange : int) -> void:
 	emit_signal("maxValueChanged", MaxValue)
 
 func CurrentValueChanged(deltaChange : int) -> void:
-	print("n")
 	if CurrentValue >= 0:
-		print("o")
 		CurrentValue += deltaChange
 		CurrentValue = clamp(CurrentValue, 0, MaxValue)
 		emit_signal("currentValueChanged", CurrentValue)

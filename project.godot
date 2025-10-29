@@ -34,8 +34,9 @@ gdscript/warnings/untyped_declaration=2
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/initial_position_type=0
-window/size/initial_position=Vector2i(683, 384)
+window/size/mode=2
+window/size/window_width_override=640
+window/size/window_height_override=480
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
