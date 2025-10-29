@@ -7,6 +7,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	assert(resources != null, "Error: You have not specified a ResourceComponent for this counter")
 	await resources.ready
 	progress_bar.max_value = resources.MaxValue
 	progress_bar.value = resources.CurrentValue

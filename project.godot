@@ -21,20 +21,36 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-UIManager="*res://scripts/Autoloads/UIManager.gd"
-FadeTransition="*res://scenes/UI/Transition/fade_transition.tscn"
+UIManager="*res://Autoloads/Scripts/UIManager.gd"
+FadeTransition="*res://Autoloads/Scenes/Transition/fade_transition.tscn"
+ConfirmDialog="*res://Autoloads/Scenes/ConfirmDialog.tscn"
+LoadingScreen="*res://Autoloads/Scenes/Transition/loading_screen.tscn"
 
 [debug]
 
 gdscript/warnings/untyped_declaration=2
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/initial_position_type=0
+window/size/initial_position=Vector2i(683, 384)
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [editor]
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
 
+[gui]
+
+theme/default_theme_scale=2.0
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true

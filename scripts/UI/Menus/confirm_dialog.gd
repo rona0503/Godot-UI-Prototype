@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 @onready var Confirm: Button = $"CenterContainer/Dialog Panel/MarginContainer/VBoxContainer/HBoxContainer/Confirm"
 @onready var NotConfirm: Button = $"CenterContainer/Dialog Panel/MarginContainer/VBoxContainer/HBoxContainer/Cancel"
 @onready var label: Label = $"CenterContainer/Dialog Panel/MarginContainer/VBoxContainer/Label"

@@ -27,3 +27,4 @@ theme_override_constants/margin_bottom = 2
 [node name="ProgressBar" type="ProgressBar" parent="PanelContainer/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 1
+show_percentage = false

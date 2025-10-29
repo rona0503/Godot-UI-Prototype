@@ -16,6 +16,7 @@ text = "Main Menu"
 layout_mode = 2
 text = "Play"
 TargetScene = ExtResource("3_xfgxo")
+DoLoadingScreen = true
 
 [node name="Options" parent="CenterContainer/Menu Panel/MarginContainer/VBoxContainer" index="3" instance=ExtResource("3_3b8pq")]
 layout_mode = 2

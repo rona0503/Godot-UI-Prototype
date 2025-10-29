@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://j2nbaicehwt4"]
+[gd_scene load_steps=8 format=3 uid="uid://j2nbaicehwt4"]
 
 [ext_resource type="PackedScene" uid="uid://dmbjlcljigt6c" path="res://scenes/UI/Menus/Utilities/pause_menu.tscn" id="1_h64sa"]
 [ext_resource type="PackedScene" uid="uid://cc7n3mqil73eu" path="res://scenes/UI/Buttons/Utilities/pause_button.tscn" id="2_oq85f"]
 [ext_resource type="PackedScene" uid="uid://qvpg8v5ehysw" path="res://scenes/UI/Menus/Utilities/option_menu.tscn" id="3_oq85f"]
-[ext_resource type="PackedScene" uid="uid://cyo4phka7jpv1" path="res://scenes/UI/Menus/Utilities/ConfirmDialog.tscn" id="4_gw64l"]
 [ext_resource type="PackedScene" uid="uid://ei2kxe13dk5l" path="res://scenes/Components/resource_component.tscn" id="5_0km3e"]
 [ext_resource type="PackedScene" uid="uid://b07bj1gp6sy12" path="res://scenes/UI/ResourceMeter/resource_meter_counter.tscn" id="6_lu0e1"]
 [ext_resource type="Script" uid="uid://cm06lfddeyjtj" path="res://scripts/DummyScripts/dummy_attack_button.gd" id="7_lu0e1"]
@@ -84,9 +83,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 
 [node name="Option Menu" parent="CanvasLayer" instance=ExtResource("3_oq85f")]
-visible = false
-
-[node name="ConfirmDialog" parent="CanvasLayer" instance=ExtResource("4_gw64l")]
 visible = false
 
 [connection signal="button_up" from="Node2D/Dummy AttackButton" to="Node2D/Dummy AttackButton" method="_on_button_up"]

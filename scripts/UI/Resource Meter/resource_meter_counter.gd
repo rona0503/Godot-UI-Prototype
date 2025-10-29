@@ -9,13 +9,13 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	assert(Resources != null, "Error: You have not specified a ResourceComponent for this counter")
 	resource_label.text = Resources.ResourceName
 	current_resource_value.text = str(Resources.CurrentValue)
 	max_resource_value.text = str(Resources.MaxValue)
 	
 	Resources.connect("maxValueChanged", onMaxValueChange)
-	Resources.connect("currentValueChanged", onCurrentValueChange)
-	
+	Resources.connect("currentValueChanged", onCurrentValueChange)	
 func onMaxValueChange(newMaxValue : int) -> void:
 	max_resource_value.text = str(newMaxValue)
 	
