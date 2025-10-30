@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://duln5ncfknult"]
+
+[ext_resource type="Script" uid="uid://xpw7soifkr25" path="res://Autoloads/Scripts/Notifications/notification_manager.gd" id="1_e4eoq"]
+
+[node name="NotificationManager" type="CanvasLayer"]
+script = ExtResource("1_e4eoq")

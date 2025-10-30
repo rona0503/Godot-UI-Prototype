@@ -69,7 +69,7 @@ func check_enum_consistency(LocalEnum : Dictionary) -> void:
 	assert(LocalEnum == Menu, "Enum Mismatch: Local Menu is not equal to UIManager Menu")
 	
 ##Notifs
-signal addDefaultNotifs( title : String, message : String)
-signal addNotifs(title : String, message : String, location : int, popStyle : String, duration : float)
-	
-	
+@warning_ignore("unused_signal")
+signal add_default_notification(title : String, message : String)
+@warning_ignore("unused_signal")
+signal add_notification(title : String, message : String, Position : String, PopUpStyle : String)

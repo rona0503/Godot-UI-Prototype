@@ -11,16 +11,18 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_hh6j2")
+Location = 4
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 self_modulate = Color(0, 0, 0, 1)
 layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -55.0
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -27.5
 offset_right = 351.0
-grow_vertical = 0
+offset_bottom = 27.5
+grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 layout_mode = 2
