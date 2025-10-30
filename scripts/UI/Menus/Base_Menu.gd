@@ -15,8 +15,6 @@ func _ready() -> void:
 	UIManager.check_enum_consistency(Menu)
 	UIManager.connect("menuOpened", Callable(self, "_on_Open_Menu"))
 	UIManager.connect("menuClosed", Callable(self, "_on_Close_Menu"))
-	#if visible == true:
-		#UIManager.menuStack.append(MenuName)
 	assert(MenuName != Menu.BASE_MENU, name + "'s Menu Name is not properly set.")
 	
 	

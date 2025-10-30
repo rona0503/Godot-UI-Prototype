@@ -16,13 +16,8 @@ Location = 4
 [node name="PanelContainer" type="PanelContainer" parent="."]
 self_modulate = Color(0, 0, 0, 1)
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -27.5
 offset_right = 351.0
-offset_bottom = 27.5
-grow_vertical = 2
+offset_bottom = 55.0
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 layout_mode = 2
@@ -40,12 +35,15 @@ layout_mode = 2
 
 [node name="Title" type="Label" parent="PanelContainer/MarginContainer/PanelContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 42
 text = "Notification"
 
 [node name="_" type="Label" parent="PanelContainer/MarginContainer/PanelContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 42
 text = ":"
 
 [node name="Message" type="Label" parent="PanelContainer/MarginContainer/PanelContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 42
 text = "Message"

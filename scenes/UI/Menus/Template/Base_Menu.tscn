@@ -34,7 +34,7 @@ layout_mode = 2
 
 [node name="Menu Name" type="Label" parent="CenterContainer/Menu Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 26
+theme_override_font_sizes/font_size = 48
 text = "Menu Template"
 
 [node name="MarginContainer" type="MarginContainer" parent="CenterContainer/Menu Panel/MarginContainer/VBoxContainer"]
