@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://j2nbaicehwt4"]
+[gd_scene load_steps=9 format=3 uid="uid://j2nbaicehwt4"]
 
 [ext_resource type="PackedScene" uid="uid://dmbjlcljigt6c" path="res://scenes/UI/Menus/Utilities/pause_menu.tscn" id="1_h64sa"]
 [ext_resource type="PackedScene" uid="uid://cc7n3mqil73eu" path="res://scenes/UI/Buttons/Utilities/pause_button.tscn" id="2_oq85f"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ei2kxe13dk5l" path="res://scenes/Components/resource_component.tscn" id="5_0km3e"]
 [ext_resource type="PackedScene" uid="uid://b07bj1gp6sy12" path="res://scenes/UI/ResourceMeter/resource_meter_counter.tscn" id="6_lu0e1"]
 [ext_resource type="Script" uid="uid://cm06lfddeyjtj" path="res://scripts/DummyScripts/dummy_attack_button.gd" id="7_lu0e1"]
+[ext_resource type="Script" uid="uid://da7aj72uyg4en" path="res://scripts/DummyScripts/DummyNotifs.gd" id="8_0ky2r"]
 [ext_resource type="PackedScene" uid="uid://wo6pjwyr3cr1" path="res://scenes/UI/ResourceMeter/resource_meter_bar.tscn" id="8_q87p1"]
 
 [node name="SampleMainScene" type="Node2D"]
@@ -89,5 +90,15 @@ size_flags_vertical = 0
 [node name="Option Menu" parent="CanvasLayer" instance=ExtResource("3_oq85f")]
 visible = false
 
+[node name="Button" type="Button" parent="."]
+offset_left = 154.0
+offset_top = 321.0
+offset_right = 248.0
+offset_bottom = 382.0
+text = "Notif
+"
+script = ExtResource("8_0ky2r")
+
 [connection signal="button_up" from="Node2D/Dummy AttackButton" to="Node2D/Dummy AttackButton" method="_on_button_up"]
 [connection signal="button_up" from="HealthCounter/Dummy AttackButton" to="HealthCounter/Dummy AttackButton" method="_on_button_up"]
+[connection signal="button_up" from="Button" to="Button" method="_on_button_up"]

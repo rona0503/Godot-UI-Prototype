@@ -68,4 +68,8 @@ func request_Confirm(message: String, ConfirmText: String, CancelText : String, 
 func check_enum_consistency(LocalEnum : Dictionary) -> void:
 	assert(LocalEnum == Menu, "Enum Mismatch: Local Menu is not equal to UIManager Menu")
 	
+##Notifs
+signal addDefaultNotifs( title : String, message : String)
+signal addNotifs(title : String, message : String, location : int, popStyle : String, duration : float)
+	
 	

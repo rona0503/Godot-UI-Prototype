@@ -1,8 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://duln5ncfknult"]
-
-[ext_resource type="Script" uid="uid://xpw7soifkr25" path="res://Autoloads/Scripts/Notifications/notification_manager.gd" id="1_e4eoq"]
-[ext_resource type="PackedScene" uid="uid://blp4a0ptsa6wv" path="res://Autoloads/Scenes/Notifications/notification.tscn" id="2_vg0q4"]
-
-[node name="NotificationManager" type="CanvasLayer"]
-script = ExtResource("1_e4eoq")
-NotificationPanel = ExtResource("2_vg0q4")
