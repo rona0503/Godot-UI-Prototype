@@ -4,7 +4,6 @@
 
 [node name="ConfirmDialog" type="CanvasLayer"]
 process_mode = 3
-visible = false
 script = ExtResource("1_21r7x")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
@@ -30,7 +29,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="CenterContainer/Dialog Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 36
 text = "Confirm"
 
 [node name="MarginContainer" type="MarginContainer" parent="CenterContainer/Dialog Panel/MarginContainer/VBoxContainer"]
@@ -45,13 +44,13 @@ alignment = 1
 [node name="Confirm" type="Button" parent="CenterContainer/Dialog Panel/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 36
 text = "Yes"
 
 [node name="Cancel" type="Button" parent="CenterContainer/Dialog Panel/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 36
 text = "No
 "
 
