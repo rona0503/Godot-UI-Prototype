@@ -61,7 +61,7 @@ func popNotification(notificationInstance : Control, popUpStyle : String, initia
 	notificationInstance.Notification_container.position += initialPosition
 	var endPosition : float = notificationInstance.Notification_container.position.x if position == "x" else notificationInstance.Notification_container.position.y
 	
-	tween.set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN)
+	tween.set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	tween.tween_property(notificationInstance.Notification_container, "position:" + position, finalPosition, duration)
 	await tween.finished
 	
@@ -69,7 +69,7 @@ func popNotification(notificationInstance : Control, popUpStyle : String, initia
 	tween.kill()
 	tween = create_tween()
 	
-	tween.set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	tween.set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	tween.tween_property(notificationInstance.Notification_container, "position:" + position, endPosition, duration)
 	await tween.finished
 	
