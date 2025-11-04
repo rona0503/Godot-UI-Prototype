@@ -26,6 +26,7 @@ FadeTransition="*res://Autoloads/Scenes/Transition/fade_transition.tscn"
 ConfirmDialog="*res://Autoloads/Scenes/ConfirmDialog.tscn"
 LoadingScreen="*res://Autoloads/Scenes/Transition/loading_screen.tscn"
 NotificationManager="*res://Autoloads/Scenes/Notifications/notification_manager.tscn"
+SignalLens="*res://addons/signal_lens/autoload/signal_lens_autoload.gd"
 
 [debug]
 
@@ -35,7 +36,6 @@ gdscript/warnings/untyped_declaration=2
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/mode=2
 window/size/window_width_override=640
 window/size/window_height_override=480
 window/stretch/mode="canvas_items"
@@ -45,6 +45,10 @@ window/stretch/aspect="expand"
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/inspector_tabs/plugin.cfg", "res://addons/nhb_functions_on_the_fly/plugin.cfg", "res://addons/signal_lens/plugin.cfg")
 
 [gui]
 
