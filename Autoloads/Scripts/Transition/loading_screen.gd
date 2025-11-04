@@ -4,7 +4,7 @@ extends CanvasLayer
 @onready var progress_bar: ProgressBar = $CenterContainer/VBoxContainer/ProgressBar
 
 var loadingTextSpeed : float = 0.4
-var loadingBarSpeed : float = 2.5
+var loadingBarSpeed : float = 1.0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hide()

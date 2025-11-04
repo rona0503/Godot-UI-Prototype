@@ -18,7 +18,7 @@ func _ready() -> void:
 
 
 func _on_button_up() -> void:
-	UIManager.emit_signal(\"add_notification\", \"Notif\", \"A WonderfulMessage\", \"Top_Middle\", \"Vertical\")
+	UIManager.emit_signal(\"add_notification\", \"Notif\", \"A WonderfulMessage\", \"Bottom_Left\", \"Vertical\")
 "
 
 [node name="SampleMainScene" type="Node2D"]
