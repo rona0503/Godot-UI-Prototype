@@ -15,6 +15,7 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Press"):
 		if !touchHeld:
 			touchHeld = true
+			swiping = false
 		startTouchPosition = get_global_mouse_position()
 		
 			
@@ -24,7 +25,7 @@ func _process(delta: float) -> void:
 		deltaLength = currentTouchPosition - startTouchPosition
 		
 		if touchHeld:
-			if deltaLength.length() >= Threshold:
+			if startTouchPosition.distance_to(currentTouchPosition) >= Threshold:
 				touchHeld = false
 				swiping = true
 			
@@ -37,6 +38,7 @@ func _process(delta: float) -> void:
 					else:
 						UIManager.swipe_Down_Dectected.emit(startTouchPosition, currentTouchPosition)
 						swiping = false
+					swiping = false
 				if abs(deltaLength.y) <= Threshold:
 					if deltaLength.x < 0:
 						UIManager.swipe_Left_Dectected.emit(startTouchPosition, currentTouchPosition)
@@ -44,8 +46,9 @@ func _process(delta: float) -> void:
 					else:
 						UIManager.swipe_Right_Dectected.emit(startTouchPosition, currentTouchPosition)
 						swiping = false
-						
-		if touchHeld:
+					swiping = false
+			currentTime = 0
+		if touchHeld and !swiping:
 			if currentTime >= LongTouchSecondsThreshold:
 				if currentTime < LongTouchSecondsThreshold + .2:
 					UIManager.long_Touch_Detected.emit(startTouchPosition, currentTouchPosition)
@@ -55,4 +58,5 @@ func _process(delta: float) -> void:
 					currentTime = 0
 					touchHeld = false
 	else:
+		touchHeld = false
 		swiping = false

@@ -5,4 +5,4 @@
 [node name="TouchDetection" type="Node2D"]
 script = ExtResource("1_yuemk")
 length = 200.0
-LongTouchSecondsThreshold = 2.5
+LongTouchSecondsThreshold = 1.5
