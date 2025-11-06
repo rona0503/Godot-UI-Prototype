@@ -25,7 +25,10 @@ func setup_notification(title : String, message : String, position : String = "T
 func processNotificationQueue() -> void:
 	if NotificationQueue.is_empty() or busy:
 		return
-	
+	if NotificationQueue.size() > 10:
+		duration = 0.5
+	else:
+		duration = 1.5
 	busy = true
 	var NotifData : Array = NotificationQueue.pop_front()
 	var NotificationInstance : Control = NotifData[0]

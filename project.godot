@@ -26,7 +26,7 @@ FadeTransition="*res://Autoloads/Scenes/Transition/fade_transition.tscn"
 ConfirmDialog="*res://Autoloads/Scenes/ConfirmDialog.tscn"
 LoadingScreen="*res://Autoloads/Scenes/Transition/loading_screen.tscn"
 NotificationManager="*res://Autoloads/Scenes/Notifications/notification_manager.tscn"
-SignalLens="*res://addons/signal_lens/autoload/signal_lens_autoload.gd"
+SwipeDetection="*res://Autoloads/Scenes/swipe_detection.tscn"
 
 [debug]
 
@@ -48,11 +48,19 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/inspector_tabs/plugin.cfg", "res://addons/nhb_functions_on_the_fly/plugin.cfg", "res://addons/signal_lens/plugin.cfg")
+enabled=PackedStringArray("res://addons/inspector_tabs/plugin.cfg", "res://addons/nhb_functions_on_the_fly/plugin.cfg")
 
 [gui]
 
 theme/default_theme_scale=2.0
+
+[input]
+
+Press={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(135, 22),"global_position":Vector2(142, 59),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
 
 [rendering]
 
