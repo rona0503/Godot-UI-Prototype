@@ -31,6 +31,7 @@ func _ready() -> void:
 	UIManager.swipe_Right_Dectected.connect(_onSwipeRight)
 	UIManager.swipe_Down_Dectected.connect(_onSwipeDown)
 	UIManager.swipe_Left_Dectected.connect(_onSwipeLeft)
+	UIManager.long_Touch_Detected.connect(_onLongTouch)
 
 
 func _onSwipeRight(startSwipePos : Vector2, curSwipePos : Vector2) -> void:
@@ -52,6 +53,11 @@ func _onSwipeLeft(startSwipePos : Vector2, curSwipePos : Vector2) -> void:
 	UIManager.add_default_notification.emit(\"Swipe\", \"Swipe Left Detected\")
 	prints(startSwipePos, curSwipePos, \"SwipeLeft\")
 	
+
+
+func _onLongTouch(startPos : Vector2, curPos : Vector2) -> void:
+	UIManager.add_default_notification.emit(\"Long Touch\", \"Long Touch Detected\")
+	prints(startPos, curPos, \"Long Touch\")
 "
 
 [node name="SampleMainScene" type="Node2D"]

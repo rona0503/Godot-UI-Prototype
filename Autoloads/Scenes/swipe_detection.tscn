@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpmqlvrovw8vb"]
-
-[ext_resource type="Script" uid="uid://cs5not48acyrc" path="res://Autoloads/Scripts/swipe_detection.gd" id="1_6yssy"]
-
-[node name="SwipeDetection" type="Node2D"]
-script = ExtResource("1_6yssy")
-length = 200.0
-SwipeThreshold = 75.0

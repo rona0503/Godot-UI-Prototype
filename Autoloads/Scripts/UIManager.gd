@@ -74,7 +74,7 @@ signal add_default_notification(title : String, message : String)
 @warning_ignore("unused_signal")
 signal add_notification(title : String, message : String, Position : String, PopUpStyle : String)
 
-
+## Haptics Signales
 @warning_ignore("unused_signal")
 signal swipe_Dectected(startSwipePosition : Vector2, currentSwipePosition : Vector2)
 @warning_ignore("unused_signal")
@@ -85,3 +85,6 @@ signal swipe_Down_Dectected(startSwipePosition : Vector2, currentSwipePosition :
 signal swipe_Right_Dectected(startSwipePosition : Vector2, currentSwipePosition : Vector2)
 @warning_ignore("unused_signal")
 signal swipe_Left_Dectected(startSwipePosition : Vector2, currentSwipePosition : Vector2)
+
+@warning_ignore("unused_signal")
+signal long_Touch_Detected(startTouchPosition : Vector2, currentTouchPosition : Vector2)

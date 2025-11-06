@@ -26,7 +26,7 @@ FadeTransition="*res://Autoloads/Scenes/Transition/fade_transition.tscn"
 ConfirmDialog="*res://Autoloads/Scenes/ConfirmDialog.tscn"
 LoadingScreen="*res://Autoloads/Scenes/Transition/loading_screen.tscn"
 NotificationManager="*res://Autoloads/Scenes/Notifications/notification_manager.tscn"
-SwipeDetection="*res://Autoloads/Scenes/swipe_detection.tscn"
+SwipeDetection="*res://Autoloads/Scenes/touch_detection.tscn"
 
 [debug]
 
